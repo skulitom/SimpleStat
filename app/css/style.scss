@@ -1,5 +1,7 @@
 $primarycolor: #222;
+$darkprimarycolor: #111;
 $maintextcolor: #FFF;
+$borderthickness: 5px;
 
 @mixin defaultstyle(){
   background-color: $primarycolor;
@@ -12,6 +14,39 @@ $maintextcolor: #FFF;
 
 .jumbotron {
   @include defaultstyle();
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $darkprimarycolor;
+    overflow-x: hidden;
+    border-right: $borderthickness solid green;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $maintextcolor;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    font-size: 50px;
+    text-align: right;
+    margin-right: 2em;
 }
 
 #wrapper {
@@ -42,4 +77,9 @@ $maintextcolor: #FFF;
     width: 100%;
     position: absolute;
     padding: 15px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

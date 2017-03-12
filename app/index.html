@@ -10,29 +10,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body class= "body-main">
+    <div id="mySidenav" class="sidenav">
+      <a class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Main Page</a>
+      <a href="#">Toolbox</a>
+      <a href="#">Examples</a>
+      <a href="#">Current Job</a>
+    </div>
     <div class="jumbotron text-center">
       <h1 id="page-heading"></h1>
       <p id="page-overview"></p>
     </div>
     <div class="wrapper">
-      <button type="button" name="button" class="btn btn-default" id="open-navbar">
+      <button type="button" name="button" class="btn btn-default" onclick="openNav()" id="open-navbar">
         <span class="glyphicon glyphicon-th-large" ></span>
       </button>
-      <div id="navbar-main">
-      </div>
         <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
 
-            </div>
-            <div class="col-sm-4">
-
-            </div>
-          </div>
         </div>
     </div>
-    <script>
-      require('./js/app.js')
-    </script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
